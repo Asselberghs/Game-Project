@@ -1,0 +1,3 @@
+<?php
+   echo '<a href="http://www.asselberghs.dk">Hjem</a> &#124; <a href="http://www.asselberghs.dk/familiens-blog/">Familiens Blog</a> &#124; <a href="http://www.asselberghs.dk/cv/">C.V.</a> &#124; <a href="http://www.asselberghs.dk/Movie/">Film Database</a> &#124; <a href="http://www.asselberghs.dk/Game/">Spil Database</a> &#124; <a href="http://www.asselberghs.dk/Book/">Bog Database</a> &#124; <a href="http://www.linkedin.com/pub/nick-asselberghs/41/572/38b" target="_blank">Linkedin</a> &#124; <a href="http://photos.asselberghs.dk/">Asselberghs Web Album</a> &#124; <a href="http://en.asselberghs.dk/">Engelsk</a>';
+?>
