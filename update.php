@@ -2,7 +2,6 @@
 echo '<link rel="stylesheet" type="text/css" href="style.css">';
 
 include('Connect.php');
-include('ErrorControl.php');
 include('AccessControl.php');
 $Title=$_GET['Title'];
 $ID=$_GET['ID'];
@@ -49,24 +48,7 @@ echo '<input type="hidden" name="ID" value="'.$ID.'"><br>';
 echo '<input type="submit" name="submit" value="Opdater">';
 
 
-$TitleErrCheckIn = $_POST['Title'];
-$GenreErrCheckIn = $_POST['Genre'];
-$DeveloperErrCheckIn = $_POST['Developer'];
-$PriceErrCheckIn = $_POST['Price'];
-$LoanerErrCheckIn = $_POST['Loaner'];
-
-$TitleErrCheck = ErrorControl($TitleErrCheckIn);
-$GenreErrCheck = ErrorControl($GenreErrCheckIn);
-$DeveloperErrCheck = ErrorControl($DeveloperErrCheckIn);
-$PriceErrCheck = ErrorControl($PriceErrCheckIn);
-$LoanerErrCheck = ErrorControl($LoanerErrCheckIn);
-
-if($TitleErrCheck==TRUE || $GenreErrCheck==TRUE || $DeveloperErrCheck==TRUE || $PriceErrCheck==TRUE || $LoanerErrCheck==TRUE) {
-	
-	$ErrCheck = TRUE;
-}
-
-if(isset($_POST['submit']) && $_POST['Title']!='' && $_POST['Genre']!='' && $_POST['Developer']!='' && $ErrCheck != TRUE){
+if(isset($_POST['submit']) && $_POST['Title']!='' && $_POST['Genre']!='' && $_POST['Developer']!=''){
 
 $Title=$_POST['Title'];
 $ID=$_POST['ID'];
@@ -174,13 +156,6 @@ echo $e->getMessage();
 
 echo '<p>Spillet er blevet opdateret</p>';
 
-}
-
-if ($ErrCheck==TRUE) {
-	
-	
-	echo '<p>Du har indtastet ugyldige karaktere</p>';
-	
 }
 
 else {

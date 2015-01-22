@@ -2,7 +2,6 @@
 echo '<link rel="stylesheet" type="text/css" href="style.css">';
 
 include('Connect.php');
-include('ErrorControl.php');
 include('AccessControl.php');
 
 echo '<form name="login" action="'.$_SERVER['PHP_SELF'].'" method="post">';
@@ -20,25 +19,8 @@ echo 'Pris: <input type="text" name="Price"><br>';
 echo '</p>';
 echo '<input type="submit" name="submit" value="Add">';
 
-$TitleErrCheckIn=$_POST['Title'];
-$GenreErrCheckIn=$_POST['Genre'];
-$DeveloperErrCheckIn=$_POST['Developer'];
-$PriceErrCheckIn=$_POST['Price'];
 
-
-
-$TitleErrCheck=ErrorControl($TitleErrCheckIn);
-$GenreErrCheck=ErrorControl($GenreErrCheckIn);
-$DeveloperErrCheck=ErrorControl($DeveloperErrCheckIn);
-$PriceErrCheck=ErrorControl($PriceErrCheckIn);
-
-if($TitleErrCheck==TRUE || $GenreErrCheck==TRUE || $DeveloperErrCheck==TRUE || $PriceErrCheck==TRUE) {
-	
-	$ErrCheck=TRUE;
-}
-
-
-if(isset($_POST['submit']) && $_POST['Title']!='' && $_POST['Genre']!='' && $ErrCheck != TRUE){
+if(isset($_POST['submit']) && $_POST['Title']!='' && $_POST['Genre']!=''){
 
 $Title=$_POST['Title'];
 $Platform=$_POST['PlatformCheck'];
@@ -85,13 +67,6 @@ try {
 	echo '<p>Spillet findes allerede i databasen</p>';
 	
 	}
-	
-}
-
-if ($ErrCheck==TRUE) {
-	
-	
-	echo '<p>Du har indtastet ugyldige karaktere</p>';
 	
 }
 

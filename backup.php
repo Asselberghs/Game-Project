@@ -1,7 +1,6 @@
 <?php
 
 include('Connect.php');
-include('ErrorControl.php');
 include('AccessControl.php');
 session_start();
 
