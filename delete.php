@@ -1,22 +1,6 @@
 <?php
-/*
-    This is a media database to mange your Games.
-    Copyright (C) 2013 Nick Tranholm Asselberghs
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 include('Connect.php');
+include('ErrorControl.php');
 include('AccessControl.php');
 $Title=$_GET['Title'];
 $ID=$_GET['ID'];
@@ -36,7 +20,22 @@ echo '</p>';
 echo '<input type="submit" name="submit" value="Slet">';
 
 
-if(isset($_POST['submit'])){
+$TitleErrCheckin=$_POST['Title'];
+$GenreErrCheckin=$_POST['Genre'];
+$DeveloperErrCheckin=$_POST['Developer'];
+
+$TitleErrCheck=ErrorControl($TitleErrCheckin);
+$GenreErrCheck=ErrorControl($GenreErrCheckin);
+$DeveloperErrCheck=ErrorControl($DeveloperErrCheckin);
+
+if($TitleErrCheck==TRUE || $GenreErrCheck==TRUE || $DeveloperErrCheck==TRUE) {
+
+$ErrCheck=TRUE;
+}
+
+
+
+if(isset($_POST['submit']) && $ErrCheck != TRUE){
 
 $Title=$_POST['Title'];
 $ID=$_POST['ID'];
@@ -51,5 +50,12 @@ try{
 
 echo '<p>Spillet er blevet slettet</p>';
 
+}
+
+if ($ErrCheck==TRUE) {
+	
+	
+	echo '<p>Du har indtastet ugyldige karaktere</p>';
+	
 }
 ?>

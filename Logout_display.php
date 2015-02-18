@@ -23,7 +23,7 @@ echo ''.$Nav;
 echo '</div>';
 
 echo '<div id="Content">';
-$Content=include('intro.php');
+$Content=include('Logout.php');
 $Content=str_replace('1', '', $Content);
 echo ''.$Content; 
 echo '</div>';
@@ -32,6 +32,7 @@ $Footer=include('footer.php');
 $Foot=str_replace('1','',$Footer);
 echo ''.$Foot;
 echo '</div>';
+
 echo '</body>';
 echo '</html>';
 ?>
