@@ -1,6 +1,6 @@
 <?php
 /*
-    This is a media database to mange your Game.
+    This is a media database to mange your Games.
     Copyright (C) 2013 Nick Tranholm Asselberghs
 
     This program is free software: you can redistribute it and/or modify
@@ -54,7 +54,7 @@ if(isset($_SESSION['Logged_In']))
 	}
 
       	if(isset($_SESSION['Logged_In'])){
-         	 echo "<td bgcolor='red'><a href='update_display.php?Title=$row->Title&ID=$row->ID&Platform=$row->Platform&Genre=$row->Genre&Developer=$row->Developer'>Edit</a></td><td bgcolor='red'><a href='delete_display.php?Title=$row->Title&ID=$row->ID'>Delete</a></td><td><p>$row->Loaner</p></td>";
+         	 echo "<td bgcolor='red'><a href='update_display.php?Title=$row->Title&ID=$row->ID&Platform=$row->Platform&Genre=$row->Genre&Developer=$row->Developer&Price=$row->Price'>Edit</a></td><td bgcolor='red'><a href='delete_display.php?Title=$row->Title&ID=$row->ID'>Delete</a></td><td><p>$row->Loaner</p></td>";
       	}
 
 echo "</tr>";
@@ -73,7 +73,7 @@ if(isset($_SESSION['Logged_In']))
 }
 
       if(isset($_SESSION['Logged_In'])){
-          echo "<td bgcolor='#808080'><a href='update_display.php?Title=$row->Title&ID=$row->ID&Platform=$row->Platform&Genre=$row->Genre&Developer=$row->Developer'>Edit</a></td><td bgcolor='#808080'><a href='delete_display.php?Title=$row->Title&ID=$row->ID'>Delete</a></td>";
+          echo "<td bgcolor='#808080'><a href='update_display.php?Title=$row->Title&ID=$row->ID&Platform=$row->Platform&Genre=$row->Genre&Developer=$row->Developer&Price=$row->Price'>Edit</a></td><td bgcolor='#808080'><a href='delete_display.php?Title=$row->Title&ID=$row->ID'>Delete</a></td>";
       }
 
 echo "</tr>";
