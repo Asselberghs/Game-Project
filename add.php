@@ -1,6 +1,6 @@
 <?php
 /*
-    This is a media database to mange your Game.
+    This is a media database to mange your Games.
     Copyright (C) 2013 Nick Tranholm Asselberghs
 
     This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,9 @@ include('AccessControl.php');
 echo '<form name="login" action="'.$_SERVER['PHP_SELF'].'" method="post">';
 echo '<p>Titel: <input type="text" name="Title" value="'.$Title.'"><br>';
 echo 'Platform:<br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="PS4" value="PS4"> <label for="PS4">PS4</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="PS3" value="PS3"> <label for="PS3">PS3</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox One" value="Xbox One"> <label for="Xbox One">Xbox One</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox 360" value="Xbox 360"> <label for="Xbox 360">Xbox 360</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="PC" value="PC"> <label for="PC">PC</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="Wii" value="Wii"> <label for="Wii">Wii</label><br />';
