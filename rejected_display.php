@@ -31,27 +31,17 @@ echo '<div id="Top"><br>';
 echo 'Asselberghs.dk';
 echo '</div>';
 echo '<div id="MainMenu">';
-$MainMenu= include('mainmenu.php');
-$MainNav=str_replace('1', '', $MainMenu);
-echo ''.$MainNav;
+include('mainmenu.php');
 echo '</div>';
 echo '<div id="Menu">';
-$Menu=include('menu.php');
-$Nav=str_replace('1', '', $Menu);
-echo ''.$Nav;
+include('menu.php');
 echo '</div>';
-
 echo '<div id="Content">';
-$Content=include('rejected.php');
-$Content=str_replace('1', '', $Content);
-echo ''.$Content; 
+include('rejected.php');
 echo '</div>';
 echo '<div id="Footer">';
-$Footer=include('footer.php');
-$Foot=str_replace('1','',$Footer);
-echo ''.$Foot;
+include('footer.php');
 echo '</div>';
-
 echo '</body>';
 echo '</html>';
 ?>
