@@ -19,8 +19,8 @@ echo '<html><head><title>Adding a user to the database</title></head><body>';
 */
 include('ErrorControl.php');
 include('Connect.php');
-include('Yubico.php');
 include('AccessControl.php');
+include('Yubico.php');
 echo "<form name=\"add_user\" action=". $_SERVER['PHP_SELF'] ." method=\"post\">";?>
 User: <input type="text" name="scriptuser" value=""><br />
 Password: <input type="password" name="scriptpass" value=""><br />

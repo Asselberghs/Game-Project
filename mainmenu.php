@@ -1,6 +1,6 @@
 <?php
 /*
-    This is a media database to mange your Game.
+    This is a media database to mange your Games.
     Copyright (C) 2013 Nick Tranholm Asselberghs
 
     This program is free software: you can redistribute it and/or modify

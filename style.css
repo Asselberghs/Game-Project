@@ -40,10 +40,11 @@ a:active {color:#FFFFFF;
 #Top {
       font-family: 'Dancing Script', cursive;
       font-size:50px;
+      background-color:#808080;
 }
 
 #Footer {
-	padding-bottom:9px;
+	padding-bottom:40px;
 	background-color:#808080;
         height:30px;
         position:relative;

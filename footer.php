@@ -1,6 +1,6 @@
 <?php
 /*
-    This is a media database to mange your Game.
+    This is a media database to mange your Games.
     Copyright (C) 2013 Nick Tranholm Asselberghs
 
     This program is free software: you can redistribute it and/or modify
@@ -19,4 +19,5 @@
 ?>
 <?php
 echo '<center>Copyright&copy; 2008-'.date('Y').' Asselberghs.dk</center>';
+echo '<a width="150" height="50" href="https://auth0.com/" rel="nofollow" target="_blank" alt="Single Sign On & Token Based Authentication - Auth0"><img width="150" height="50" alt="JWT Auth for open source projects" src="//cdn.auth0.com/oss/badges/a0-badge-light.png" align="right"/></a>';
 ?>

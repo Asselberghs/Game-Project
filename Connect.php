@@ -1,6 +1,6 @@
 <?php
 /*
-    This is a media database to mange your Game.
+    This is a media database to mange your Games.
     Copyright (C) 2013 Nick Tranholm Asselberghs
 
     This program is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@
 ?>
 <?php
 
-$dsn = 'mysql:dbname=Database_Name;host=IP_Address';
-$user = 'Username';
-$pass = 'Password';
+$dsn = 'mysql:dbname=AsselberghsMedia;host=188.121.44.159';
+$user = 'AsselberghsMedia';
+$pass = 'r%zUW6MP7@f8Uz';
 
 try {
 

@@ -1,6 +1,6 @@
 <?php
 /*
-    This is a media database to mange your Game.
+    This is a media database to mange your Games.
     Copyright (C) 2013 Nick Tranholm Asselberghs
 
     This program is free software: you can redistribute it and/or modify
@@ -31,17 +31,27 @@ echo '<div id="Top"><br>';
 echo 'Asselberghs.dk';
 echo '</div>';
 echo '<div id="MainMenu">';
-include('mainmenu.php');
+$MainMenu= include('mainmenu.php');
+$MainNav=str_replace('1', '', $MainMenu);
+echo ''.$MainNav;
 echo '</div>';
 echo '<div id="Menu">';
-include('menu.php');
+$Menu=include('menu.php');
+$Nav=str_replace('1', '', $Menu);
+echo ''.$Nav;
 echo '</div>';
+
 echo '<div id="Content">';
-include('add.php');
+$Content=include('add.php');
+$Content=str_replace('1', '', $Content);
+echo ''.$Content; 
 echo '</div>';
 echo '<div id="Footer">';
-include('footer.php');
+$Footer=include('footer.php');
+$Foot=str_replace('1','',$Footer);
+echo ''.$Foot;
 echo '</div>';
+
 echo '</body>';
 echo '</html>';
 ?>
