@@ -17,20 +17,19 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 ?>
-<?php
+<?php 
 
-$dsn = 'mysql:dbname=AsselberghsMedia;host=188.121.44.159';
-$user = 'AsselberghsMedia';
-$pass = 'r%zUW6MP7@f8Uz';
+$dsn = 'mysql:dbname=Database_Name;host=IP_Address';
+
+$user = 'Username';
+
+$pass = 'Password';
 
 try {
-
-$db = new PDO($dsn, $user, $pass);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-}
+    $db = new PDO($dsn, $user, $pass);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
 catch(PDOException $e) {
-    die('Could not connect to database:<br />' . $e->getMessage());   
+    die('Could not connect to database:<br />' . $e->getMessage());    
 }
-
 ?>
