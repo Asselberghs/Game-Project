@@ -54,3 +54,35 @@ a:active {color:#FFFFFF;
 
 tr:nth-child(even) {background: #CCC}
 tr:nth-child(odd) {background: #FFF}
+
+/*Form Styling*/
+
+input[type="text"] {
+    position: absolute;
+    right:1000px;
+}
+
+input[type="password"] {
+    position: absolute;
+    right:1000px;
+}
+
+textarea {
+    position: absolute;
+    right:1000px;
+}
+
+#PS4,#PS4_Digital,#PS3,#Xbox_One,#Xbox_One_Digital,#Xbox_360,#PC,#Wii,#Wii_U,#Board_Game,#Card_Game {
+    position: absolute;
+    right:1000px;
+}
+
+select {
+    position: absolute;
+    right: 1000px;
+}
+
+input[type="submit"] {
+    position: absolute;
+    right: 1000px;
+}

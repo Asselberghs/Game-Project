@@ -28,21 +28,21 @@ echo '<form name="login" action="'.$_SERVER['PHP_SELF'].'" method="post">';
 echo '<p>Titel: <input type="text" name="Title" value="'.$Title.'"><br>';
 echo 'Platform:<br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="PS4" value="PS4"> <label for="PS4">PS4</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="PS4 Digital" value="PS4 Digital"> <label for="PS4 Digital">PS4 Digital</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="PS4_Digital" value="PS4 Digital"> <label for="PS4 Digital">PS4 Digital</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="PS3" value="PS3"> <label for="PS3">PS3</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox One" value="Xbox One"> <label for="Xbox One">Xbox One</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox One Digital" value="Xbox One Digital"> <label for="Xbox One Digital">Xbox One Digital</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox 360" value="Xbox 360"> <label for="Xbox 360">Xbox 360</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox_One" value="Xbox One"> <label for="Xbox One">Xbox One</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox_One_Digital" value="Xbox One Digital"> <label for="Xbox One Digital">Xbox One Digital</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Xbox_360" value="Xbox 360"> <label for="Xbox 360">Xbox 360</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="PC" value="PC"> <label for="PC">PC</label><br />';
 echo '<input type="checkbox" name="PlatformCheck[]" id="Wii" value="Wii"> <label for="Wii">Wii</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="Wii U" value="Wii U"> <label for="Wii U">Wii U</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="Board Game" value="Board Game"> <label for="Board Game">Board Game</label><br />';
-echo '<input type="checkbox" name="PlatformCheck[]" id="Card Game" value="Card Game"> <label for="Card Game">Card Game</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Wii_U" value="Wii U"> <label for="Wii U">Wii U</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Board_Game" value="Board Game"> <label for="Board Game">Board Game</label><br />';
+echo '<input type="checkbox" name="PlatformCheck[]" id="Card_Game" value="Card Game"> <label for="Card Game">Card Game</label><br />';
 echo 'Genre: <input type="text" name="Genre"><br>';
 echo 'Udvikler: <input type="text" name="Developer"><br>';
 echo 'Pris: <input type="text" name="Price"><br>';
 echo '</p>';
-echo '<input type="submit" name="submit" value="Add">';
+echo '<input type="submit" name="submit" value="Add"><br />';
 
 $TitleErrCheckIn=$_POST['Title'];
 $GenreErrCheckIn=$_POST['Genre'];
@@ -57,7 +57,7 @@ $DeveloperErrCheck=ErrorControl($DeveloperErrCheckIn);
 $PriceErrCheck=ErrorControl($PriceErrCheckIn);
 
 if($TitleErrCheck==TRUE || $GenreErrCheck==TRUE || $DeveloperErrCheck==TRUE || $PriceErrCheck==TRUE) {
-	
+
 	$ErrCheck=TRUE;
 }
 
@@ -81,9 +81,9 @@ try {
     echo $e->getMessage();
 }
 
-	while($row = $Query_Check->fetch(PDO::FETCH_OBJ)) 
+	while($row = $Query_Check->fetch(PDO::FETCH_OBJ))
 		{
-		$titlecheck=$row->Title;		
+		$titlecheck=$row->Title;
 		}
 
 	if($titlecheck!=$Title){
@@ -103,25 +103,25 @@ try {
 
 	echo '<p>Spillet er tilfoejet til databasen</p>';
 
-	} 
-	else 
-	{
-	
-	echo '<p>Spillet findes allerede i databasen</p>';
-	
 	}
-	
+	else
+	{
+
+	echo '<p>Spillet findes allerede i databasen</p>';
+
+	}
+
 }
 
 if ($ErrCheck==TRUE) {
-	
-	
+
+
 	echo '<p>Du har indtastet ugyldige karaktere</p>';
-	
+
 }
 
 else {
-	
+
 		echo '<p>Formen er tom, ingen data er indsaette</p>';
 }
 
