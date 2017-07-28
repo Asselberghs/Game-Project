@@ -72,17 +72,26 @@ textarea {
     right:1000px;
 }
 
-#PS4,#PS4_Digital,#PS3,#Xbox_One,#Xbox_One_Digital,#Xbox_360,#PC,#Wii,#Wii_U,#Board_Game,#Card_Game {
-    position: absolute;
-    right:1000px;
+#Paperback,#Hardback,#E-Book,#Comic,#Manga {
+position: absolute;
+right:1000px;
 }
 
 select {
-    position: absolute;
-    right: 1000px;
+    position: relative;
+    left: 20px;
 }
 
-input[type="submit"] {
-    position: absolute;
-    right: 1000px;
+input[type="text"] {
+    position: relative;
+    left: 20px;
+}
+
+input#Searchsubmit {
+    position: relative;
+    left: 25px;
+}
+
+.borrowed {
+    background-color: #FF0000 !important;
 }
